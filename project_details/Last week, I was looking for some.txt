@@ -1,0 +1,174 @@
+Last week, I was looking for some
+software to solve a very specific
+problem. Lo and behold, I found this
+great app for 10 bucks. But as a Vibe
+engineer, I didn't pay for it. Instead,
+I spent 3 days, $500 in claude credits,
+and missed my kids' baseball game over
+the weekend to build a crappier version
+from scratch. Developers are living in
+weird times as some of us are becoming
+less productive and ditching AI
+altogether. Like the streamer coding
+garden just completely destroyed the
+grift in this video.
+And it's not fun. It's not fun at all.
+But many others are going allin and
+seeing productivity gains like never
+before. Every employee at multi-trillion
+dollar company Nvidia is now AI enabled.
+Every one of our engineers 100% is now
+assisted by AI coders and our
+productivity has gone up incredibly.
+The truth is that AI does suck. It's
+like gambling. When you prompt it and
+the code actually works, you feel that
+indescribable rush of dopamine.
+I'm coming day and night. I mean, it's
+terrific. But eventually your prompt
+won't work and this leads to a vicious
+cycle that I like to call the prompt
+treadmill of hell where you keep burning
+through credits but never actually get
+what you need. Despite that drawback,
+there are ways to make AI coding more
+reliable and quasi deterministic thanks
+to the power of model context protocol
+servers. In today's video, we'll look at
+seven MCP servers every dev needs to
+know about to make AI coding suck less.
+It is October 14th, 2025, and you're
+watching the code report. I think it's
+safe to say that the majority of
+programmers are now using AI in some
+capacity, but very few are using it to
+its full potential. If you don't already
+have a couple of MCP servers hooked up
+to claude code, cursor, open code, or
+whatever you prefer, you're falling
+behind and you're not going to make it.
+But what even is a model context
+protocol server? Well, in one sentence,
+it's a standardized way for your coding
+agent to talk to external systems. That
+could be an app running on your local
+machine. It could be a remote server
+that runs your code. or it could be a
+thirdparty API. To understand its full
+potential, let's look at some examples.
+On this channel, I've complained
+endlessly about AI not being able to
+generate proper spelt 5 code. Well,
+luckily, just a few days ago, that
+problem has been solved thanks to the
+release of the spelt MCP server. All you
+have to do is install this bad boy in
+your favorite coding tool, like I'm
+using Claude Code here. And now, instead
+of going in blind, you can start a
+prompt with /spelt. This will
+automatically tell Claude how to get the
+right spelt documentation. And more
+importantly, use the spelt autofixer.
+It'll perform a static analysis on the
+code and delopify it when the LLM
+hallucinates random ReactJS code in your
+project. But if you're a front-end
+developer, the most time-conuming task
+is implementing your designer's Figma
+files into actual code. Well, not
+anymore. The Figma MCP server allows you
+to connect your local Figma app on the
+desktop or in the cloud. It'll pull a
+design file and automatically implement
+it in HTML and CSS. You can even
+generate React components, use Tailwind,
+or build iOS UI elements using Figma's
+more reliable tooling. Pretty cool. But
+what if you're building something like a
+payment system with a third-party API?
+If this is something you really can't
+afford to screw up, well, Stripe and
+many other APIs now have an MCP server
+that can fetch documentation for the
+exact API version you're using. Not only
+that, but it has a long list of tools
+you can use to access live data in
+Stripe, opening the door to all sorts of
+possibilities, like accidentally
+refunding 10,000 customers with a single
+prompt. Now, even if you leverage these
+tools, your code is still probably going
+to break in unexpected ways at runtime.
+If you use a monitoring tool like
+Sentry, you can access all of the issues
+and errors your AI assistant missed
+before deploying. Instead of trying to
+understand the slop you rolled out a few
+minutes ago, you just tell it to query
+the Sentry issues and fix them on the
+fly. That's helpful, but not all runtime
+issues can be caught. At other times, it
+might be the QA guy who worked at
+Blizzard for 7 years who assigns you a
+Jira ticket to fix some pointless edge
+case he found, in which case you'll want
+to have the Atlassian or GitHub MCP
+server installed. You can use it to
+automatically pull issues and tickets
+without ever needing to read them
+yourself. Just run a prompt that tells
+the AI to fix the issue and close the
+ticket while you sit on the train
+reading your favorite book. That's
+awesome. And if you follow this guide,
+you'll eventually have a billion-dollar
+app that requires more infrastructure to
+scale. There are now MCP servers for
+AWS, Cloudflare, Verscell, and many
+others that can let AI provision the
+actual resources you use in the cloud.
+In theory, the great thing about robots
+is that they won't forget to shut down
+an EC2 instance that will destroy your
+finances, but don't quote me on that. So
+far, all the examples we've looked at
+require the trust of a third party
+developer. So, you have to trust us.
+Just relax and fall. One, two, three.
+No.
+What's cool about this protocol, though,
+is that it's essentially standardized
+now. And you can use it to build your
+own highly specialized server. Like
+maybe you want a server that can look up
+custom data sources, manage your
+smartome, or really anything you can
+imagine. And they're easy to build
+because there's now an MCP framework for
+every major programming language out
+there. But after you build one, you'll
+need a place to deploy it. And an
+awesome platform you need to know about
+is Savala, the sponsor of today's video.
+It's a modern successor to Heroku that
+combines Google Kubernetes Engine with
+Cloudflare to give you a simple way to
+deploy full stack applications,
+databases, and static sites without
+drowning in YAML configs. We can easily
+ship our app by connecting a Git repo in
+the Savala dashboard or by selecting one
+of their pre-built templates. Once it's
+live, you get app analytics, environment
+variables, and everything else you need
+to scale your app. You also get real
+environment pipelines for preview,
+staging, and production, so your team
+can promote changes safely instead of
+just praying to the prod gods. So try
+out Savala for free with $50 in free
+credits using the link below. This has
+been the Code Report. Thanks for
+watching and I will see you in the next
+

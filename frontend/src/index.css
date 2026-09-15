@@ -1,0 +1,238 @@
+/* ==========================================================================
+   MEDREA Clinical Design System Tokens & Base Styles
+   Serious Clinical Command Center Aesthetic
+   ========================================================================== */
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Clinical Palette (Deep Slate & High-Contrast Clinical Accents) */
+  --bg-primary: #0b1120;
+  --bg-surface: #131d31;
+  --bg-surface-elevated: #1e293b;
+  --bg-surface-active: #293548;
+  
+  --border-subtle: #1e293b;
+  --border-default: #2d3b55;
+  --border-focus: #3b82f6;
+
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Priority & Status Signals */
+  --high-red: #ef4444;
+  --high-red-bg: rgba(239, 68, 68, 0.12);
+  --high-red-border: rgba(239, 68, 68, 0.35);
+
+  --med-amber: #f59e0b;
+  --med-amber-bg: rgba(245, 158, 11, 0.12);
+  --med-amber-border: rgba(245, 158, 11, 0.35);
+
+  --low-cyan: #06b6d4;
+  --low-cyan-bg: rgba(6, 182, 212, 0.12);
+  --low-cyan-border: rgba(6, 182, 212, 0.35);
+
+  --success-green: #10b981;
+  --success-green-bg: rgba(16, 185, 129, 0.12);
+  --success-green-border: rgba(16, 185, 129, 0.35);
+
+  --accent-blue: #2563eb;
+  --accent-blue-hover: #1d4ed8;
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: 3px;
+}
+
+/* Badges & Severity Chips */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-high {
+  color: var(--high-red);
+  background: var(--high-red-bg);
+  border: 1px solid var(--high-red-border);
+}
+
+.badge-medium {
+  color: var(--med-amber);
+  background: var(--med-amber-bg);
+  border: 1px solid var(--med-amber-border);
+}
+
+.badge-low {
+  color: var(--low-cyan);
+  background: var(--low-cyan-bg);
+  border: 1px solid var(--low-cyan-border);
+}
+
+.badge-success {
+  color: var(--success-green);
+  background: var(--success-green-bg);
+  border: 1px solid var(--success-green-border);
+}
+
+.badge-neutral {
+  color: var(--text-secondary);
+  background: rgba(148, 163, 184, 0.1);
+  border: 1px solid var(--border-default);
+}
+
+/* Clinical Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: var(--accent-blue);
+  color: #ffffff;
+}
+.btn-primary:hover:not(:disabled) {
+  background: var(--accent-blue-hover);
+}
+
+.btn-secondary {
+  background: var(--bg-surface-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-default);
+}
+.btn-secondary:hover:not(:disabled) {
+  background: var(--bg-surface-active);
+  border-color: var(--border-focus);
+}
+
+.btn-danger {
+  background: var(--high-red-bg);
+  color: var(--high-red);
+  border-color: var(--high-red-border);
+}
+.btn-danger:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.25);
+}
+
+.btn-success {
+  background: var(--success-green-bg);
+  color: var(--success-green);
+  border-color: var(--success-green-border);
+}
+.btn-success:hover:not(:disabled) {
+  background: rgba(16, 185, 129, 0.25);
+}
+
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* Forms */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.form-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-input, .form-select, .form-textarea {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  color: var(--text-primary);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  font-family: inherit;
+  outline: none;
+  width: 100%;
+}
+
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--border-focus);
+}
+
+/* Modal Backdrop & Container */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 16px;
+}
+
+.modal-content {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  width: 100%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+}
